@@ -1,0 +1,9 @@
+@mixin my-border($position: "", $color: $main-border-color, $width: $main-border-width, $type: $main-border-type)
+    @if $position == ""
+        border: $width $type $color
+    @else
+        border-#{$position}: $width $type $color
+
+@mixin for-smartfone
+    @media screen and (max-width: 600px)
+        @content

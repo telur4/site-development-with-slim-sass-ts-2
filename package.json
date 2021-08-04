@@ -1,0 +1,24 @@
+{
+  "name": "1-sneakers",
+  "version": "1.0.0",
+  "description": "- [デモサイト](https://code-step.com/demo/html/media/ \"Sneakers\")",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch sass:css",
+    "slim": "slimrb -p index.slim index.html",
+    "slim2": "slimrb -p index2.slim index2.html",
+    "tsc": "npx tsc -w --outDir js/",
+    "ts-init": "npm install --save typescript @types/node",
+    "tsc-init": "npx tsc --init",
+    "typings-init": "npx typings init -y",
+    "typings-jquery": "npx typings install dt~jquery --save --global"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^16.4.10",
+    "typescript": "^4.3.5"
+  }
+}

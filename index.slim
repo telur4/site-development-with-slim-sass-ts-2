@@ -1,0 +1,92 @@
+doctype 5
+html#html lang="ja"
+    head
+        meta charset="utf-8"/
+        title Sneakers
+        meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト"/
+        meta name="viewport" content="widht=device-width,initial-scale=1"/
+        link rel="shortcut icon" href="./img/favicon.ico"/
+        link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"/
+        link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/
+        link rel="stylesheet" href="./css/style.css"/
+        script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        script src="./js/main2.js"
+
+    body
+        header#header
+            h1.site-title
+                a href="./index.html"
+                    img src="./img/logo.svg" alt="Sneakers"/
+            nav#navi
+                ul.nav-menu
+                    li
+                        a href="#pickup" PICK UP
+                    li
+                        a href="#feature" FEATURE
+                    li
+                        a href="#contact" CONTACT
+                ul.nav-sns
+                    li
+                        a href="https://twitter.com/" target="_blank" Twitter
+                    li
+                        a href="https://www.facebook.com/" target="_blank" facebook
+                    li
+                        a href="https://www.instagram.com" target="_blank" instagram
+
+            .toggle_btn
+                - 3.times do
+                    span
+
+            #mask
+
+        main#main
+            #video
+                video#bg-video src="./video/video.mp4" loop=true autoplay=true muted=true playsinline=true
+
+            section#pickup
+                h2.sec-title PICKUP
+                ul.slick-area
+                    - 9.times do |i|
+                        li
+                            img src="./img/pickup#{i+1}.jpg" alt="ピックアップ#{i+1}　テキストテキスト"/
+
+            section#feature
+                h2.sec-title FEATURE
+                .grid
+                    - 9.times do |i|
+                        .item
+                            img.fadein src="./img/feature#{i+1}.jpg" alt=""/
+                            .item-content
+                                p.item-cat category
+                                p.item-text テキストテキストテキストテキストテキストテキストテキストテキスト
+                                p.item-date XXXX.XX.XX
+
+            section#contact
+                h2.sec-title CONTACT
+                .content
+                    .contact-info
+                        p テキストテキストテキスト
+                        - 2.times do
+                            p テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+
+                    .contact-form
+                        form action="#"
+                            dl
+                                dt
+                                    label for="name" Name:
+                                dd
+                                    input#name type="text" name="your-name"/
+                                dt
+                                    label for="email" Mail:
+                                dd
+                                    input#email type="email" name="your-email"/
+                                dt
+                                    label for="message" Message:
+                                dd
+                                    textarea#message name="your-message"
+                            .button
+                                input type="submit" value="SEND"/
+
+        footer#footer
+            p &copy; Sneakers
